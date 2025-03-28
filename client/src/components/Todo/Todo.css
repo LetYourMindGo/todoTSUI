@@ -1,0 +1,184 @@
+.todo-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.header__user-list {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    z-index: 2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.header__list-name {
+    width: 75%;
+    text-align: center;
+    overflow: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.user-list__header {
+    margin: 0 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container__new-task {
+    height: 10%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-task__input {
+    font-family: 'Lato', sans-serif;
+    height: 90%;
+    width: 70%;
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 0 5px;
+    border: 1px solid lightgray;
+    background-color: white;
+    transition: 0.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.new-task__input:focus {
+    height: 95%;
+    width: 70%;
+    font-size: 1rem;
+    outline: none;
+    margin: 10px 0;
+    padding: 0 5px;
+    border: 1px solid black;
+    background-color: lightgray;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.new-task__action-button {
+    height: 2rem;
+    width: 20%;
+    color: white;
+    border: none;
+    padding: 0.4rem;
+    background-image: linear-gradient(0deg, rgb(9, 100, 200) 0%, rgb(0, 122, 255) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.new-task__action-button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(0deg, rgb(0, 122, 255) 0%, rgb(9, 100, 200) 100%);
+    transition: 1s;
+}
+
+.user-list__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
+
+.user-list__user {
+    overflow: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.user-list__kick-user-button {
+    width: 20%;
+    color: white;
+    border: none;
+    padding: 0;
+    background-image: linear-gradient(0deg, rgb(9, 100, 200) 0%, rgb(0, 122, 255) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.user-list__kick-user-button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(0deg, rgb(0, 122, 255) 0%, rgb(9, 100, 200) 100%);
+    transition: 1s;
+}
+
+.todo-container__task-list {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    list-style: none;
+    padding: 1rem;
+}
+
+.task-list__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.task-list__item.done {
+    order: 1;
+}
+
+.item__text {
+    width: 100%;
+    overflow: auto;
+    word-wrap: break-word;
+    text-wrap: balance;
+    padding: 0 1rem;
+    margin: 0;
+}
+
+
+.done .item__text{
+    text-decoration: line-through;
+    color: lightgray;
+}
+
+
+.item__checkbox::before {
+    padding: 1rem;
+    background-color: black;
+    size: 10rem;
+}
+
+.item__checkbox::after {
+    padding: 1rem;
+    background-color: black;
+    size: 15rem;
+}
+
+.item__remove-task-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    border: none;
+    padding: 0;
+    background-image: linear-gradient(0deg, rgb(9, 100, 200) 0%, rgb(0, 122, 255) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.item__remove-task-button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(0deg, rgb(0, 122, 255) 0%, rgb(9, 100, 200) 100%);
+    transition: 1s;
+}
+
+.done .item__remove-task-button {
+    opacity: 1;
+}
+

@@ -1,0 +1,11 @@
+.home-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.todo_container__placeholder {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 10rem 0;
+}

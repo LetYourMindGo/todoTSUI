@@ -1,0 +1,6 @@
+CREATE TABLE shared_lists (
+    shareID SERIAL PRIMARY KEY,
+    listID INTEGER REFERENCES todolists(listID) ON DELETE CASCADE,
+    userID INTEGER REFERENCES users(userID) ON DELETE CASCADE,
+    UNIQUE (listID, userID)
+);

@@ -1,0 +1,120 @@
+.owner-lists__header {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid white;
+}
+
+.owner-lists__header h3 {
+    width: 70%;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.list__list-card,
+.list__edit-list-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.list__list-card:hover {
+    filter: brightness(80%);
+    transition: 0.5s;
+}
+
+.list-card__list-name {
+    width: 70%;
+    margin: 5px 0 5px 5px;
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+}
+
+.list-card__list-name:hover {
+    font-size: 1.05rem;
+    transition: 0.5s;
+}
+
+.edit-list-name__input {
+    font-family: 'Lato', sans-serif;
+    height: 95%;
+    width: 70%;
+    font-size: 1rem;
+    margin: 5px 0;
+    padding: 0 5px;
+    border: none;
+    background-color: lightgray;
+    transition: 0.5s;
+}
+
+.edit-list-name__input:focus {
+    height: 95%;
+    width: 70%;
+    font-size: 1rem;
+    outline: none;
+    margin: 5px 0;
+    padding: 0 5px;
+    background-color: lightgray;
+}
+
+.list-card__list-name::after {
+    color: black;
+}
+
+.list-card__buttons,
+.edit-list-name__buttons {
+    height: 100%;
+    width: 30%;
+}
+
+.buttons__button-item {
+    height: 100%;
+    width: 33%;
+    border: none;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(0deg, rgb(9, 100, 200) 0%, rgb(0, 122, 255) 100%);
+}
+
+.buttons__button-item:last-child {
+    width: 34%;
+}
+
+.buttons__button-save,
+.buttons__button-cancel {
+    height: 100%;
+    width: 50%;
+    border: none;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-image: linear-gradient(0deg, rgb(9, 100, 200) 0%, rgb(0, 122, 255) 100%);
+}
+
+.buttons__button-item:hover,
+.buttons__button-save:hover,
+.buttons__button-cancel:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+    background-image: linear-gradient(0deg, rgb(0, 122, 255) 0%, rgb(9, 100, 200) 100%);
+    transition: 0.5s;
+}
+
+.no-transition * {
+    transition: none !important;
+};
+

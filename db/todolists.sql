@@ -1,0 +1,5 @@
+CREATE TABLE todoLists (
+    listID SERIAL PRIMARY KEY,
+    listName TEXT NOT NULL,
+    ownerID INT REFERENCES users(userID) ON DELETE CASCADE
+);
