@@ -4,8 +4,10 @@ import cors from 'cors';
 import { createUser, getUserID } from './routes/users';
 import { cancelShareList, createList, deleteList, getListData, getUserLists, shareList, updateListName } from './routes/lists';
 import { initTodoSocket } from './sockets/todoSockets';
+import { config } from 'dotenv';
 
-const PORT = 3000;
+config();
+const PORT = process.env.EXPRESS_PORT;
 const app = express();
 const server = createServer(app);
 
@@ -26,5 +28,5 @@ app.delete('/todoLists/:listID', deleteList);
 initTodoSocket(server);
 
 server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at PORT: ${PORT}`);
 });

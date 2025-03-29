@@ -25,7 +25,9 @@
     "typescript": "^5.8.2"
   },
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.ts"
+    "dev": "nodemon app.ts",
+    "start": "node dist/app.js"
   }
 }
