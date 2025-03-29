@@ -1,4 +1,4 @@
-CREATE TABLE tasks (
+CREATE TABLE IF NOT EXISTS tasks (
     taskID SERIAL PRIMARY KEY,
     description TEXT NOT NULL,
     listID INT NOT NULL REFERENCES todolists(listID) ON DELETE CASCADE,

@@ -1,4 +1,4 @@
-CREATE TABLE todoLists (
+CREATE TABLE IF NOT EXISTS todoLists (
     listID SERIAL PRIMARY KEY,
     listName TEXT NOT NULL,
     ownerID INT REFERENCES users(userID) ON DELETE CASCADE
