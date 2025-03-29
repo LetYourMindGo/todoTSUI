@@ -7,7 +7,7 @@ import { initTodoSocket } from './sockets/todoSockets';
 import { config } from 'dotenv';
 
 config();
-const PORT = process.env.EXPRESS_PORT;
+const PORT = 3000;
 const app = express();
 const server = createServer(app);
 
