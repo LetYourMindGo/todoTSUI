@@ -40,6 +40,7 @@ export const getUserID = async (req: Request, res: Response) => {
 
 export const createUser = async (req: Request, res: Response) => {
     try {
+	console.log('request body:', req.body);
         const newUser: NewUser = req.body;
         const hashedPassword = await argon2.hash(
             newUser.password,
@@ -66,7 +67,8 @@ export const createUser = async (req: Request, res: Response) => {
             [newUser.username, hashedPassword]
         );
         res.json(result.rows[0]?.userid || '');
-    } catch {
+    } catch(err)  {
+	console.error("DB ERROR:", err);
         res.status(500).json({ error:'DB error' });
     }
 };

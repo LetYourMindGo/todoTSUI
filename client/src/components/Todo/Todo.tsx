@@ -4,12 +4,12 @@ import { Task, NewTask, TodoProps, ListUsers } from '../../types/types';
 import './Todo.css';
 
 const Todo = ({ listID }: TodoProps) => {
-    const baseUrl = import.meta.env.VITE_BASE_URL;
+    const socketUrl = import.meta.env.VITE_SOCKET_URL;
     const [taskData, setTaskData] = useState<Task[]>([]);
     const [newTask, setNewTask] = useState<string>('');
     const [listName, setListName] = useState<string>('');
     const [listUsers, setListUsers] = useState<ListUsers[]>([]);
-    const socket = io(baseUrl);
+    const socket = io(socketUrl, { transports: ['websocket', 'polling'] });
     const userID = Number(localStorage.getItem('userID'));
 
     useEffect(() => {

@@ -5,7 +5,11 @@ import { Server, Socket } from "socket.io";
 
 export const initTodoSocket = (server: HttpServer) => {
     const io = new Server(server, {
-        cors: { origin: '*' }
+        cors: {
+	 	origin: '*',
+       		methods: ['GET', 'POST']
+	},
+	transports: ['websocket', 'polling']
     });
     const lists: Record<string, Task[]> = {};
     let listName: string = '';

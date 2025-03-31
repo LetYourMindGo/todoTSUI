@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import { createServer } from 'http';
 import cors from 'cors';
 import { createUser, getUserID } from './routes/users';
@@ -13,6 +13,10 @@ const server = createServer(app);
 
 app.use(cors());
 app.use(express.json());
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    console.error("Server error:", err);
+    res.status(500).json({ message: "Internal Server Error", error: err.message });
+});
 
 app.post('/users/:username', getUserID);
 app.post('/users', createUser);
